@@ -13,6 +13,7 @@ h1{
 
 textarea {
   width: 600px;
+  resize: none;
 }
 
 #display_trains {
