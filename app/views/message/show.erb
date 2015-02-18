@@ -1,3 +1,7 @@
 <% @messages.each do |message| %>
   <p><%= message.content %></p>
+  <form action="/lines/<%= @line.id %>/messages/<%= message.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Message">
+  </form>
 <% end %>
