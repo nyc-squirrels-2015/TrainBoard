@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   <!--
     application.css is where you put your styles
   -->
@@ -42,9 +43,15 @@
             <li><a href="/login">Log In</a></li>
            </ul>
            <% end %>
-        </div><!--/.nav-collapse -->
+        </div>
+    <div id="login-toolbar">
+      <% if current_user %>
+        <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/login">Login</a>
+      <% end %>
   </header>
-  <%= yield %>
-</div>
-</body>
+     <%= yield %>
+  </div>
+ </body>
 </html>
