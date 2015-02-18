@@ -10,7 +10,7 @@ post '/signup' do
  @new_user = User.new(params[:user])
  if @new_user.save
   session[:user_id] = @new_user.id
-  redirect '/user'
+  redirect '/user/#{user.id}'
  else
    redirect '/signup'
  end
@@ -24,7 +24,7 @@ post '/login' do
  @user = User.find_by(email: params[:user][:email])
   if @user.try(:authenticate, params[:user][:password])
     session[:user_id] = @user.id
-    redirect '/'
+    redirect '/user/#{user.id}'
   else
     redirect '/login'
   end
