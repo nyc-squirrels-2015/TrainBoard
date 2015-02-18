@@ -4,6 +4,8 @@ class CreateMessages < ActiveRecord::Migration
       t.string :content, null:false
       t.references :user
       t.references :line
+
+      t.timestamps
     end
   end
 end
