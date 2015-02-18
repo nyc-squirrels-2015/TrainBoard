@@ -2,11 +2,8 @@
   <h1>Select a Train Line</h1>
 </div>
 
-<div class="col-md-offset-4 col-md-4">
+<div id="display_trains" class="col-md-offset-4 col-md-4">
  <% @lines.each do |line| %>
-    <ul>
-    <a href="/lines/<%= line.id %>"><li><%= line.name %></li></a>
-    </ul>
+  <h4><a href="/lines/<%= line.id %>"><%= line.name %></h4></a>
   <% end %>
- </ul>
 </div>
