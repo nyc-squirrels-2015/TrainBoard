@@ -5,7 +5,9 @@ end
 
 get '/lines/:id' do |id|
   @line = Line.find(id)
+  @messages = @line.messages
   erb :"line/show"
 end
+
 
 

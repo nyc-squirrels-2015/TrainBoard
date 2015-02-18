@@ -1,0 +1,5 @@
+<form action="/lines/<%= @line.id %>/messages" method="POST">
+  <input type="hidden" name="message[line_id]" value="<%= @line.id %>">
+  <textarea name="message[content]" value="Type message here" rows=10 columns=40></textarea>
+  <p><input type="submit" value="Add Message"></p>
+</form>
