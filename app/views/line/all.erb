@@ -1,0 +1,12 @@
+<div class="col-md-offset-4 col-md-4">
+  <h1>Select a Train Line</h1>
+</div>
+
+<div class="col-md-offset-4 col-md-4">
+ <% @lines.each do |line| %>
+    <ul>
+    <a href="/lines/<%= line.id %>"><li><%= line.name %></li></a>
+    </ul>
+  <% end %>
+ </ul>
+</div>
