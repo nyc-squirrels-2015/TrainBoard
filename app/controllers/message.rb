@@ -4,11 +4,7 @@ post '/lines/:id/messages' do |id|
   @message = Message.new(params[:message])
   @message.user = current_user
   if @message.save
-    if request.xhr?
-      erb :'message/show'
-  else
-      redirect "/lines/#{id}"
-    end
+    redirect "/lines/#{id}"
   end
 end
 
