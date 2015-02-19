@@ -32,7 +32,7 @@ end
 
 describe "POST /signup" do
   it "should successfully redirect after user created" do
-    post '/signup', params = {user:{name: "Nancy Smith", email: "nsmith@aol.com", password: "password"}}
+    post '/signup', params = {user:{name: "Jane Smith", email: "janesmith@aol.com", password: "password"}}
     expect(last_response).to be_redirect
     follow_redirect!
     last_request.path.should == '/lines'
